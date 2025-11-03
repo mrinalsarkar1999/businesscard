@@ -10,7 +10,7 @@ app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect("mongodb+srv://user1:Mrinal121@dev.yaatzny.mongodb.net/Dev")
+  .connect("Your mongodb url")
   .then(console.log("Connected to Dev database"));
 const formDataSchema = new mongoose.Schema(
   {
@@ -190,3 +190,4 @@ app.get("/user/cards", async (req, res) => {
 app.listen(5000, () => {
   console.log("Server is running on 'http://localhost:5000'");
 });
+
